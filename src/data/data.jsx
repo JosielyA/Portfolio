@@ -85,6 +85,6 @@ export const proyectos = [
 export const paginas = [
   { nombre: "Experiencia", ruta: "#experiencia" },
   { nombre: "Proyectos", ruta: "#proyectos" },
-  { nombre: "Tecnologias", ruta: "#tenologias" },
+  { nombre: "Tecnologias", ruta: "#tecnologias" },
   { nombre: "Sobre mi", ruta: "#sobremi" },
 ];

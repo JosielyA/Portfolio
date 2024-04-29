@@ -10,6 +10,8 @@ import { FaLink } from "react-icons/fa";
 import yo from "./assets/images/yo.jpg";
 
 import { useEffect, useState } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +25,7 @@ function App() {
     }
   };
   useEffect(() => {
+    Aos.init();
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
@@ -33,7 +36,7 @@ function App() {
   return (
     <div className={`${isOpen ? "overflow-hidden" : ""} `} id="inicio">
       <header
-        className={`${scrollfromtop ? "h-14" : "h-24"} fixed top-0 flex w-full items-center justify-between bg-gradient-to-b from-black from-0% via-black/90 via-80% to-transparent to-100% px-8 text-black transition-all duration-200 md:px-16`}
+        className={`${scrollfromtop ? "h-14" : "h-24"} fixed top-0 z-50 flex w-full items-center justify-between bg-gradient-to-b from-black from-0% via-black/90 via-80% to-transparent to-100% px-8 text-black transition-all duration-200 md:px-16`}
       >
         <button onClick={() => window.scrollTo(0, 0)}>
           <IoCodeSlashSharp
@@ -100,16 +103,40 @@ function App() {
             </div>
           </div>
           <img
-            className="size-5/6 rounded-full md:size-auto md:w-4/12"
+            className="size-5/6 rounded-full transition-all hover:scale-105 md:size-auto md:w-4/12"
             src={yo}
             alt="Imagen generada con IA de Josiely Araujo"
           />
         </div>
       </section>
       <section id="experiencia"></section>
-      <section className="p-4 text-white" id="proyectos">
-        <header className="flex place-content-center items-center py-10 lg:px-60">
-          <h2 className="text-5xl font-bold lg:text-6xl">
+      <section className="flex flex-col items-center" id="tecnologias">
+        <h2
+          data-aos="slide-right"
+          className="text-4xl font-bold text-white md:text-6xl"
+        >
+          Tecnologias
+        </h2>
+        <ul className="flex flex-wrap place-content-center items-center gap-8 pt-6 text-white">
+          {Object.values(tecnologias).map((tech, i) => (
+            <li
+              data-aos-offset="15"
+              data-aos="slide-right"
+              className="flex flex-col items-center"
+              key={i}
+            >
+              {tech.icono}
+              <h3>{tech.nombre}</h3>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="text-white" id="proyectos">
+        <header
+          data-aos="slide-right"
+          className="flex place-content-center items-center py-10 lg:px-60"
+        >
+          <h2 className="text-4xl font-bold lg:text-6xl">
             <TypeAnimation
               sequence={["Proyectos"]}
               wrapper="span"
@@ -119,9 +146,10 @@ function App() {
             />
           </h2>
         </header>
-        <ul className="flex flex-col  items-center gap-8">
+        <ul className="flex flex-col items-center gap-8 px-4">
           {proyectos.map((proyecto, i) => (
             <li
+              data-aos="slide-right"
               className="flex max-w-[70rem] flex-col shadow-lg shadow-white md:flex-row"
               key={i}
             >
@@ -167,17 +195,7 @@ function App() {
           ))}
         </ul>
       </section>
-      <section className="flex flex-col items-center p-4" id="tecnologias">
-        <h2 className="text-4xl font-bold text-white">Tecnologias</h2>
-        <ul className="flex flex-wrap place-content-center items-center gap-8 p-5 text-white">
-          {Object.values(tecnologias).map((tech, i) => (
-            <li className="flex flex-col items-center" key={i}>
-              {tech.icono}
-              <h3>{tech.nombre}</h3>
-            </li>
-          ))}
-        </ul>
-      </section>
+
       <section id="sobremi"></section>
     </div>
   );
