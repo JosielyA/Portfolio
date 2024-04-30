@@ -4,6 +4,7 @@
 
 body {
   background-image: url(./assets/images/background3.jpeg);
+  background-size: cover;
 }
 
 @layer base {

@@ -1,9 +1,15 @@
-import { FaCss3Alt, FaGithub, FaReact } from "react-icons/fa6";
+import { FaCss3Alt, FaGithub, FaReact, FaXTwitter } from "react-icons/fa6";
 import { FaNodeJs } from "react-icons/fa";
 import { SiFastapi, SiTailwindcss } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
+import {
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+  AiOutlineMail,
+} from "react-icons/ai";
 
 import invermoca from "../assets/images/invermoca.png";
 import maxwell from "../assets/images/maxwellparts.png";
@@ -82,9 +88,42 @@ export const proyectos = [
     ],
   },
 ];
+
+export const contact = [
+  {
+    titulo: "josiely.araujo21@gmail.com",
+    icon: <AiOutlineMail className="size-7 sm:size-9" />,
+    href: "mailto:josiely.araujo21@gmail.com",
+  },
+  {
+    titulo: "linkedin.com/in/josiely-araujo",
+    icon: <AiOutlineLinkedin className="size-7 sm:size-9" />,
+    href: "https://www.linkedin.com/in/josiely-araujo",
+  },
+  {
+    titulo: "@josiely_dev",
+    icon: <AiOutlineInstagram className="size-7 sm:size-9" />,
+    href: "https://www.instagram.com/josiely_dev/",
+  },
+];
+export const contactIcons = [
+  {
+    icon: <AiOutlineMail className="size-12 md:size-16 lg:size-20" />,
+    href: "mailto:josiely.araujo21@gmail.com",
+  },
+  {
+    icon: <AiOutlineLinkedin className="size-12 md:size-16 lg:size-20" />,
+    href: "https://www.linkedin.com/in/josiely-araujo",
+  },
+  {
+    icon: <AiOutlineInstagram className="size-12 md:size-16 lg:size-20" />,
+    href: "https://www.instagram.com/josiely_dev/",
+  },
+];
+
 export const paginas = [
-  { nombre: "Experiencia", ruta: "#experiencia" },
-  { nombre: "Proyectos", ruta: "#proyectos" },
-  { nombre: "Tecnologias", ruta: "#tecnologias" },
+  { nombre: "Inicio", ruta: "#inicio" },
   { nombre: "Sobre mi", ruta: "#sobremi" },
+  { nombre: "Proyectos", ruta: "#proyectos" },
+  { nombre: "Contacto", ruta: "#contacto" },
 ];
