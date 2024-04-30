@@ -4,11 +4,15 @@ import { SiFastapi, SiTailwindcss } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { BiLogoTypescript } from "react-icons/bi";
+import curriculum from "../assets/files/Curriculum Josiely Araujo.pdf";
 import {
   AiOutlineFacebook,
+  AiOutlineFile,
   AiOutlineInstagram,
   AiOutlineLinkedin,
   AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
 
 import invermoca from "../assets/images/invermoca.png";
@@ -105,6 +109,11 @@ export const contact = [
     icon: <AiOutlineInstagram className="size-7 sm:size-9" />,
     href: "https://www.instagram.com/josiely_dev/",
   },
+  {
+    titulo: "Curriculum Vitae",
+    icon: <AiOutlineFile className="size-7 sm:size-9" />,
+    href: curriculum,
+  },
 ];
 export const contactIcons = [
   {
@@ -118,6 +127,10 @@ export const contactIcons = [
   {
     icon: <AiOutlineInstagram className="size-12 md:size-16 lg:size-20" />,
     href: "https://www.instagram.com/josiely_dev/",
+  },
+  {
+    icon: <AiOutlineFile className="size-12 md:size-16 lg:size-20" />,
+    href: curriculum,
   },
 ];
 

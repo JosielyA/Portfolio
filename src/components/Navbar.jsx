@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoCodeSlashSharp } from "react-icons/io5";
+import logoWhite from "../assets/logo/logo-white.png";
 import { paginas } from "../data/data";
 
 export const Navbar = ({ isOpen, setIsOpen, scrollfromtop }) => {
@@ -9,8 +10,9 @@ export const Navbar = ({ isOpen, setIsOpen, scrollfromtop }) => {
       className={`${scrollfromtop ? "h-14" : "h-24"} fixed top-0 z-50 flex w-full items-center justify-between bg-gradient-to-b from-black from-0% via-black/90 via-80% to-transparent to-100% px-8 text-black transition-all duration-200 md:px-16`}
     >
       <button onClick={() => window.scrollTo(0, 0)}>
-        <IoCodeSlashSharp
-          className={`${scrollfromtop ? "size-8" : "size-12 md:size-16"}  text-white transition-all duration-200`}
+        <img
+          src={logoWhite}
+          className={`${scrollfromtop ? "size-32" : "size-40 md:size-60"}  text-white transition-all duration-200`}
         />
       </button>
       <nav>

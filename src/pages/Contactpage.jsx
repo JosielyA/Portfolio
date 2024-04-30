@@ -1,5 +1,9 @@
 import React, { useRef, useState } from "react";
-import { AiOutlineSend, AiOutlineCopy } from "react-icons/ai";
+import {
+  AiOutlineSend,
+  AiOutlineCopy,
+  AiOutlineDownload,
+} from "react-icons/ai";
 import { contact, contactIcons } from "../data/data";
 import { useCopyToClipboard } from "usehooks-ts";
 import { toast } from "react-hot-toast";
@@ -111,12 +115,23 @@ export const Contactpage = () => {
                   >
                     <AiOutlineSend className="size-7 sm:size-9" />
                   </a>
-                  <button
-                    onClick={handleCopy(titulo)}
-                    className="rounded-lg bg-white p-1 text-black"
-                  >
-                    <AiOutlineCopy className="size-7 sm:size-9" />
-                  </button>
+                  {titulo == "Curriculum Vitae" ? (
+                    <a
+                      href={href}
+                      download
+                      target="_blank"
+                      className="rounded-lg bg-white p-1 text-black"
+                    >
+                      <AiOutlineDownload className="size-7 sm:size-9" />
+                    </a>
+                  ) : (
+                    <button
+                      onClick={handleCopy(titulo)}
+                      className={`rounded-lg bg-white p-1 text-black`}
+                    >
+                      <AiOutlineCopy className={`size-7 sm:size-9`} />
+                    </button>
+                  )}
                 </div>
               </li>
             ))}
@@ -169,7 +184,7 @@ export const Contactpage = () => {
       </div>
       <div className="mt-5 flex w-full place-content-around items-center bg-red-800/50 py-5">
         {contactIcons.map(({ icon, href }) => (
-          <a href={href} target="_blank">
+          <a href={href} target="_blank" download>
             {icon}
           </a>
         ))}

@@ -1,11 +1,11 @@
 import React from "react";
-import { tecnologias } from "../data/data";
+import { contact, tecnologias } from "../data/data";
 
 export const Aboutpage = () => {
   return (
     <section
       id="sobremi"
-      className="flex min-h-[500px] flex-col items-center gap-5 bg-black/70 px-5 text-white md:flex-row md:place-content-around"
+      className="my-10 flex min-h-[500px] flex-col items-center gap-5 bg-black/70 px-5 py-10 text-white md:flex-row md:place-content-around"
     >
       <section className="flex flex-col items-center md:w-[48%]">
         <h2
@@ -32,6 +32,17 @@ export const Aboutpage = () => {
           soluciones innovadoras. Estoy emocionada por la oportunidad de seguir
           creciendo y aprendiendo en un nuevo desafío laboral. ¡Explora mi
           portafolio y descubre mi pasión por la tecnología!"
+        </p>
+        <p className="text-pretty py-2 text-justify text-xl sm:px-5">
+          Si quieres saber mas sobre mi, mira mi{" "}
+          <a
+            className="text text-blue-300 underline"
+            target="_blank"
+            href={contact[3].href}
+          >
+            Curriculum
+          </a>
+          .
         </p>
       </section>
       <section
