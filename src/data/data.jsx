@@ -61,7 +61,7 @@ export const proyectos = [
   {
     nombre: "Maxwell Parts",
     foto: maxwell,
-    link: "https://calm-pastelito-309924.netlify.app/",
+    link: "https://maxwellparts.netlify.app/",
     tecnologias: [
       tecnologias.react,
       tecnologias.javascript,
@@ -72,7 +72,7 @@ export const proyectos = [
   {
     nombre: "Invermoca",
     foto: invermoca,
-    link: "https://invermoca.netlify.app/",
+    link: "https://invermoca.com/",
     tecnologias: [
       tecnologias.react,
       tecnologias.javascript,
