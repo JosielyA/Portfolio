@@ -16,7 +16,7 @@ import {
 } from "react-icons/ai";
 
 import invermoca from "../assets/images/invermoca.png";
-import maxwell from "../assets/images/maxwellparts.png";
+import pink from "../assets/images/Captura2.png";
 import onetv from "../assets/images/onetvform.png";
 
 export const tecnologias = {
@@ -59,14 +59,16 @@ export const tecnologias = {
 };
 export const proyectos = [
   {
-    nombre: "Maxwell Parts",
-    foto: maxwell,
-    link: "https://maxwellparts.netlify.app/",
+    nombre: "Pink Aesthetics",
+    foto: pink,
+    link: "https://pinkaesthetics.netlify.app/",
     tecnologias: [
       tecnologias.react,
+      tecnologias.tailwind,
       tecnologias.javascript,
       tecnologias.css,
       tecnologias.node,
+      tecnologias.github,
     ],
   },
   {
